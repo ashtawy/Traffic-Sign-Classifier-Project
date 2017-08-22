@@ -67,7 +67,7 @@ Upon completing the 150-th training epoch, my final model results were:
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-I chose five random traffic sign images from the test data and I obtained 100% accuracy. 
+I downloaded five random traffic sign images from here https://en.wikipedia.org/wiki/Road_signs_in_Germany and I obtained 80% accuracy. 
 
 <p align="center"> <img src="./vis/images_from_web.png"> </p>
 
