@@ -14,7 +14,11 @@
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Visualization plots are included in the solution notebook.
+<p align="center"> <img src="./vis/train_hist.png"> </p>
+
+<p align="center"> <img src="./vis/test_hist.png"> </p>
+
+<p align="center"> <img src="./vis/a_sign.png"> </p>
 
 ### Design and Test a Model Architecture
 
@@ -54,14 +58,10 @@ To train the model, I used an Adam optimizer that minimizes a loss function defi
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
-My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
-Upond completing the 150-th training epoch, my final model results were:
+Upon completing the 150-th training epoch, my final model results were:
 * training set accuracy of 1.0 (i.e. 100%)
-* Validation set accuracy of 0.945.
-* test set accuracy of 0.932.
+* Validation set accuracy of 0.957.
+* test set accuracy of 0.943.
 
 ### Test a Model on New Images
 
@@ -69,42 +69,36 @@ Upond completing the 150-th training epoch, my final model results were:
 
 I chose five random traffic sign images from the test data and I obtained 100% accuracy. 
 
-The images are shown in the solution's notebook.
+<p align="center"> <img src="./vis/images_from_web.png"> </p>
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
-
-28	Children crossing
-24	24	Road narrows on the right
-13	13	Yield
-18	18	General caution
-8	8	Speed limit (120km/h)
 
 Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Children crossing      		| Children crossing					| 
-| Road narrows on the right     			| Road narrows on the right	|
-| Yeild     			| Yield 										|
-| General caution					| General caution				|
-| Speed limit (120km/h)	      		| Speed limit (120km/h)				|
+| Dangerous curve to the right     		| Dangerous curve to the right					| 
+| Pedestrians    			| General caution	|
+| Road narrows on the right     			| Road narrows on the right 										|
+| Road work				| Road work				|
+| Wild animals crossing  		| Wild animals crossing				|
 
 
-The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. 
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. 
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
-For the first image, the model is certain that this is a Children Crossing sign (probability of 1.0), and the image does contain a Children Crossing sign. The top five soft max probabilities were
+I get almost 1.0 probability for each predicted image except the misclassified sign (Pedestrians) for which the certainity of the model is 0.92 given mistakenly to General Caution sign. The second largest probability of this image is 0.0789 and was assigned to the correct class label of Pedestrians.   
+For the first image, the model is certain that this is a Dangerous curve to the right sign (probability of 1.0), and the image does contain a Children Crossing sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 1.00    		| Children crossing					| 
-| 0.99     			| Road narrows on the right	|
-| 1.00     			| Yield 										|
-| 1.00					| General caution				|
-| 1.00      		| Speed limit (120km/h)				|
+| 1.0     		| Dangerous curve to the right					| 
+| 0.92    			| General caution	|
+| 1.0     			| Road narrows on the right 										|
+| 1.0				| Road work				|
+| 1.0  		| Wild animals crossing				|
 
 
 
