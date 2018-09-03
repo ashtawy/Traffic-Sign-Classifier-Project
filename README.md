@@ -3,7 +3,7 @@
 In this project, we build a CNN classifier to recognize traffic signs. A Jupyter Notebook with all the code to preform this task is included [here](Traffic_Sign_Classifier.ipynb). In what follows I summarize the data preparation and classifier training and evaluation procedure. 
 
 
-### Data Set Summary & Exploration
+#### Data Set Summary & Exploration
 
 1. I loaded the provided training/validation/test files and extracted features and labels as NumPy arrays. I used the Python & NumPy functions "len", "shape", & "unique" to collect the following summary about the data. 
 
@@ -21,7 +21,7 @@ In this project, we build a CNN classifier to recognize traffic signs. A Jupyter
 
 <p align="center"> <img src="./vis/a_sign.png"> </p>
 
-### Building a CNN Classifier
+#### Building a CNN Classifier
 
 1. Data Preprocessing
 * I converted images to grayscale by taking a weighted sum of the three color channels. The weights for the RGB channels are 0.299, 0.587, 0.114, respectively. Working on one channel instead of three improve the model's prediction accuracy. It prevents the model from overfitting the color artificats where the information in one channel is sufficient to classifiy the traffic signs effectively. Also, the training speed increases by utilizing less number of parameters in the first convolution layer.
@@ -59,7 +59,7 @@ Upon completing the 150-th training epoch, my final model results were:
 * Validation set accuracy of 0.957.
 * test set accuracy of 0.943.
 
-### Classification Accuracy
+#### Classification Accuracy
 
 I downloaded five random traffic sign images from here https://en.wikipedia.org/wiki/Road_signs_in_Germany and evaluated the CNN model on them. the classifier recognized 4 out of 5 correctly (80% accuracy). 
 
