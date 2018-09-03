@@ -1,5 +1,6 @@
 **Traffic Sign Recognition** 
 
+In this project, we build a CNN classifier to recognize traffic signs. A Jupyter Notebook with all the code to preform this task is included here. In what follows I summarize the data preparation and classifier training and evaluation procedure. 
 
 
 ### Data Set Summary & Exploration
@@ -30,6 +31,7 @@
 * The difference between the original data set and the augmented data set is around 10% in terms of prediction accuracy on the validation set.
 
 2. Model Architecture
+
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
@@ -49,14 +51,15 @@ My final model consisted of the following layers:
 |						|												|
  
 3. Training the Model
-To train the model, I used an Adam optimizer that minimizes a loss function defined as the mean cross entropy between predicted class probabilities and true labels. The optimization procedure prosceeds as follows. The training data is divided into small 128-example batches. For each batch, the optimizer is invoked to predict the probabilities of the 128 traffic signds and the error between the predictions and true labels are used to compute the gradient. The gradient is then applied by the optimizer to update the parameters of the model. The magintue of the update is a function of the magnitude of the gradient and the learning rate which I set to 0.001. The next batch is then passed to the optimizer to perform the same forward and backward passes of prediction gradient back probagation. After completeing the last batch, the entire process (epoch) is repeated on the whole dataset over and over again. I trained the network for a total of 150 epochs.     
+
+To train the model, I used Adam optimizer that minimizes a loss function defined as the mean cross entropy between predicted class probabilities and true labels. The optimization procedure prosceeds as follows. The training data is divided into small 128-example batches. For each batch, the optimizer is invoked to predict the probabilities of the 128 traffic signds and the error between the predictions and true labels are used to compute the gradient. The gradient is then applied by the optimizer to update the parameters of the model. The magintue of the update is a function of the magnitude of the gradient and the learning rate which I set to 0.001. The next batch is then passed to the optimizer to perform the same forward and backward passes of prediction gradient back probagation. After completeing the last batch, the entire process (epoch) is repeated on the whole dataset over and over again. I trained the network for a total of 150 epochs.     
 
 Upon completing the 150-th training epoch, my final model results were:
 * training set accuracy of 1.0 (i.e. 100%)
 * Validation set accuracy of 0.957.
 * test set accuracy of 0.943.
 
-### Test the Classifier on New Images
+### Model Evaluatin
 
 I downloaded five random traffic sign images from here https://en.wikipedia.org/wiki/Road_signs_in_Germany and I obtained 80% accuracy. 
 
