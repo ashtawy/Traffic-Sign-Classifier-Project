@@ -1,6 +1,6 @@
 **Traffic Sign Recognition** 
 
-In this project, we build a CNN classifier to recognize traffic signs. A Jupyter Notebook with all the code to preform this task is included [here](project.ipynb). In what follows I summarize the data preparation and classifier training and evaluation procedure. 
+In this project, we build a CNN classifier to recognize traffic signs. A Jupyter Notebook with all the code to preform this task is included [here](Traffic_Sign_Classifier.ipynb). In what follows I summarize the data preparation and classifier training and evaluation procedure. 
 
 
 ### Data Set Summary & Exploration
@@ -59,9 +59,9 @@ Upon completing the 150-th training epoch, my final model results were:
 * Validation set accuracy of 0.957.
 * test set accuracy of 0.943.
 
-### Model Evaluatin
+### Classification Accuracy
 
-I downloaded five random traffic sign images from here https://en.wikipedia.org/wiki/Road_signs_in_Germany and I obtained 80% accuracy. 
+I downloaded five random traffic sign images from here https://en.wikipedia.org/wiki/Road_signs_in_Germany and evaluated the CNN model on them. the classifier recognized 4 out of 5 correctly (80% accuracy). 
 
 <p align="center"> <img src="./vis/images_from_web.png"> </p>
 
@@ -74,9 +74,6 @@ Here are the results of the prediction:
 | Road narrows on the right     			| Road narrows on the right 										|
 | Road work				| Road work				|
 | Wild animals crossing  		| Wild animals crossing				|
-
-
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. 
 
 I get almost 1.0 probability for each predicted image except the misclassified sign (Pedestrians) for which the certainity of the model is 0.92 given mistakenly to General Caution sign. The second largest probability of this image is 0.0789 and was assigned to the correct class label of Pedestrians.   
 For the first image, the model is certain that this is a Dangerous curve to the right sign (probability of 1.0), and the image does contain a Children Crossing sign. The top five soft max probabilities were
