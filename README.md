@@ -1,6 +1,6 @@
 **Traffic Sign Recognition** 
 
-In this project, we build a CNN classifier to recognize traffic signs. A Jupyter Notebook with all the code to preform this task is included here. In what follows I summarize the data preparation and classifier training and evaluation procedure. 
+In this project, we build a CNN classifier to recognize traffic signs. A Jupyter Notebook with all the code to preform this task is included [here](project.ipynb). In what follows I summarize the data preparation and classifier training and evaluation procedure. 
 
 
 ### Data Set Summary & Exploration
